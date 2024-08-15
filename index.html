@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>都道府県クイズ</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ヘッダー・タイトル -->
+    <header>
+        <h1 class="title">都道府県クイズ</h1>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <article class="container">
+
+        <!-- 地図の箱 -->
+        <article class="map-article">
+
+                <object type="image/svg+xml" data="/svg/map-full.svg" id="japan-map"></object>           
+
+        </article>
+
+        <!-- クイズの箱 -->
+        <article class="quiz-article">
+
+            <!-- 問題タイトル -->
+            <h1 class="quiz-main">問題 </h1>
+
+            <!-- クイズセクション -->
+            <section class="quiz-section">
+                <!-- 問題スタートボタン -->
+                <button class="start-btn">>>問題スタート >></button>
+
+                <!-- クイズ表示部分 -->
+                <div class="quiz-container" style="display:none;">
+                    <div id="question"></div>
+                    <div id="options">
+                        <button class="option-btn" data-answer="A"></button>
+                        <button class="option-btn" data-answer="B"></button>
+                        <button class="option-btn" data-answer="C"></button>
+                    </div>
+                    <div id="result" style="display:none;"></div>
+                    <div id="result-memo" style="display:none;"></div>
+                    <button id="next-btn" style="display:none;">次のクイズに進む</button>
+                    <button id="result-btn" style="display:none;">結果を見る</button>
+                </div>
+            </section>
+
+            <!-- 結果セクション -->
+            <section class="result-section" style="display:none;">
+                <h1 class="quiz-allresult">結果は・・・</h1>
+                <h1 id="final-score" class="quiz-score">・・点！</h1>
+                <h1 id="score-comment"></h1>
+            </section>
+
+        </article>
+
+    </article>
+
+    <!-- フッター -->
+    <footer>
+
+        <h1 class="footer">copyright xxxxx  2024</h1>
+
+    </footer>
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+</body>
+</html>

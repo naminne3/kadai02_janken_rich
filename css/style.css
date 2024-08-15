@@ -1,0 +1,243 @@
+body {
+    
+    font-family: Arial, sans-serif; /* フォントの指定 */
+    background-color: #ffffff;
+    
+    color: #333;
+    text-align: center;
+    height: 100%;
+    margin: 0; 
+    padding: 0; 
+    font-size: 100%;
+
+
+    background-image: url('/image/backgroundot.jpg');/* 背景画像の設定 */
+    background-size: cover; /* 背景画像を画面全体に拡大 */
+    background-repeat: no-repeat; /* 背景画像の繰り返しを無効にする */
+    background-attachment: fixed; /* スクロール時に背景画像を固定 */
+
+}
+
+header {
+    background-color: #6AB7FF;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    
+}
+
+footer {
+    background-color: #6AB7FF;
+    color: #fff;
+    font-size: xx-small;
+    padding: 1px 0;
+    margin-top: 50px;
+}
+
+
+
+/* h1の元々の設定をリセットする */
+
+h1 {
+    margin: 0; 
+    padding: 0; 
+    font-size: 100%;
+}
+
+
+
+.title { 
+    padding: 0;
+    font-size: 25px;
+    border-bottom: solid 3px #cce4ff;
+    position: relative;
+    width: 50%; /* タイトル全体の幅を50%に設定 */
+    margin: 0 auto; /* 水平方向に中央寄せ */
+    letter-spacing: 50px; /* 文字間を広げる*/
+    font-weight: bold;
+}
+
+/* タイトルの装飾 */
+.title:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px #5472cd;
+    bottom: -3px;
+    width: 20%; /* :after擬似要素の幅をtitleの幅に合わせる */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 40%); /* 2列で40%ずつ */
+    gap: 50px; /* 記事間の隙間を50px空ける */
+    justify-content: center; /* グリッドアイテムを水平方向に中央揃え */
+    margin: 0 auto; /* グリッドコンテナ自体を水平方向に中央揃え */
+    
+}
+
+/* 地図の箱 */
+.map-article {
+    margin: 20px;
+    background-color: #E3F3FF;
+}
+
+
+/* クイズの箱 */
+.quiz-article {
+    margin: 20px 0;
+    background-color: #FCFF99;
+}
+
+
+/* クイズ内側の箱 */
+.quiz-container {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+
+/* 問題タイトル */
+.quiz-main {
+    position: relative;
+    padding: 0;
+    margin: 20px auto;
+    background: #e6f4ff;
+    color: #5c98d4;
+    font-weight: bold;
+    width: 50%;
+    font-size: xx-large;
+    letter-spacing: 20px;
+}
+
+/* 問題タイトルの装飾 */
+.quiz-main:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 30px;
+    border: 15px solid transparent;
+    border-top: 15px solid #e6f4ff;
+    width: 0;
+    height: 0;
+}
+
+
+
+/* スタートボタン */
+.start-btn {
+    /* display: block; */
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    position: relative;
+    margin: 50px auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #27acd9;
+    border: 3px solid #27acd9;
+    box-shadow: 5px 5px #27acd9;
+    transition: 0.3s ease-in-out;
+    font-size: x-large;
+    cursor: pointer; /* 手形のカーソルを表示 */
+}
+
+/* スタートボタンの装飾 */
+.start-btn:hover {
+    box-shadow: none;
+    transform: translate(5px, 5px);
+    color: #27acd9;
+}
+
+
+/* pの初期設定をリセット */
+.quiz-main p {
+    margin: 0; 
+    padding: 0;
+}
+
+/* クイズセクション */
+.quiz-section {
+    background-color: #ffffff;
+    margin: 30px;
+}
+
+/* 結果セクション */
+.result-section {
+    background-color: #ffffff;
+    margin: 30px;
+    padding: 50px;
+}
+
+/* 結果点数部分の装飾 */
+#final-score {
+    color: #5472cd;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+/* 問題装飾 */
+#question {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+/* 選択肢ボタン */
+.option-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 選択肢ボタンの装飾 */
+.option-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 正解不正解とコメント */
+#result, #result-memo {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+
+
+
+/* 次へ＆結果を見るボタン */
+#next-btn, #result-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 次へ＆結果を見るボタンの装飾 */
+#next-btn:hover, #result-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 「結果は・・・」部分 */
+.quiz-allresult {
+    margin-bottom: 50px;
+    font-size: xx-large;
+}
+
+/* 「・・・点」部分 */
+.quiz-score, #score-comment {
+    margin-top: 20px;
+    font-size: xx-large;
+}
